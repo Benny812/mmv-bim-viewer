@@ -1,0 +1,33 @@
+{
+  "name": "mmv-bim-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "update-ifcjs": "npm i web-ifc-three@latest && npm i && copy-wasm",
+    "copy-wasm": "cpy node_modules/web-ifc/web-ifc.wasm . && cpy node_modules/web-ifc/web-ifc-mt.wasm ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benny812/mmv-bim-viewer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benny812/mmv-bim-viewer/issues"
+  },
+  "homepage": "https://github.com/Benny812/mmv-bim-viewer#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.78.1"
+  },
+  "dependencies": {
+    "camera-controls": "^1.36.2",
+    "cpy-cli": "^4.2.0",
+    "three": "^0.135.0",
+    "web-ifc-three": "^0.0.119"
+  }
+}

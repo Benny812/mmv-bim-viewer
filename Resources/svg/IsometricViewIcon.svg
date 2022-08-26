@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg3830"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3827" />
+  <g
+     id="layer1">
+    <path
+       d="M 31.681186,23.900946 10.501011,23.863454 0.42357474,31.61889 21.60375,31.656573 Z"
+       fill="#6e6e6e"
+       id="path848"
+       style="display:inline;fill:#d1d1d1;fill-opacity:0.5;fill-rule:evenodd;stroke:#000000;stroke-width:0.742517;stroke-linecap:round;stroke-linejoin:round" />
+    <path
+       d="M 10.487165,0.39909098 V 23.845247 L 0.42349855,31.618509 V 8.1723536 Z"
+       fill="#cbcbcb"
+       fill-opacity="0.49598"
+       id="path838"
+       style="display:inline;fill:#d1d1d1;fill-opacity:0.5;fill-rule:evenodd;stroke:#000000;stroke-width:0.742517;stroke-linecap:round;stroke-linejoin:round" />
+    <path
+       d="M 31.66745,0.39947159 H 10.487241 V 23.845627 H 31.66745 Z"
+       fill="#cbcbcb"
+       fill-opacity="0.49598"
+       id="path850"
+       style="display:inline;fill:#d1d1d1;fill-opacity:0.5;fill-rule:evenodd;stroke:#000000;stroke-width:0.742517;stroke-linecap:round;stroke-linejoin:round" />
+    <path
+       d="M 31.667378,0.39908981 H 10.487169 L 0.42350236,8.1723524 H 21.603712 Z"
+       id="path840"
+       style="display:inline;fill:#d1d1d1;fill-opacity:0.5;fill-rule:evenodd;stroke:#000000;stroke-width:0.742517;stroke-linecap:round;stroke-linejoin:round" />
+    <path
+       d="M 31.667378,0.39908981 V 23.845249 L 21.603712,31.618512 V 8.1723524 Z"
+       id="path842"
+       style="display:inline;fill:#d1d1d1;fill-opacity:0.5;fill-rule:evenodd;stroke:#000000;stroke-width:0.742517;stroke-linecap:round;stroke-linejoin:round" />
+    <path
+       d="M 21.603785,8.1727328 H 0.42357474 V 31.61889 H 21.603785 Z"
+       id="path844"
+       style="display:inline;fill:#d1d1d1;fill-opacity:0.5;fill-rule:evenodd;stroke:#000000;stroke-width:0.742517;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+</svg>
