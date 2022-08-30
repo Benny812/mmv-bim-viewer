@@ -93,12 +93,16 @@ scene.add(camera);
 /************** Lights ******************/
 
 const lightColor = 0xffffff;
+const softColor = 0xdcdcdc;
 
-const light = new HemisphereLight(lightColor, 0.1);
+const ambLight = new AmbientLight(lightColor, 0, 5);
+// scene.add(ambLight);
+
+const light = new HemisphereLight(lightColor, softColor, 0.9);
 scene.add(light);
 
 const dirLight = new DirectionalLight(lightColor, 1);
-scene.add(dirLight);
+// scene.add(dirLight);
 
 /***************** Renderer **************************/
 
@@ -197,6 +201,15 @@ const preselectMat = new MeshLambertMaterial({
   color: 0xff88ff,
   depthTest: false,
 });
+const selectMat = new MeshLambertMaterial({
+  transparent: true,
+  opacity: 0.6,
+  color: 0xff00ff,
+  depthTest: false,
+});
+
+const selectModel = { id: -1 };
+window.ondblclick = (event) => highlight(event, selectMat, selectModel);
 
 function pick(event) {
   const found = cast(event)[0];
@@ -313,20 +326,37 @@ function toGeometryCamera(event) {
     this.style = "outline-offset: -6px";
     this.setAttribute("data-clicked", "true");
 
-    cameraControls.setPosition(0, 1, 0);
+    cameraControls.setPosition(0, 10, 0);
     cameraControls.mouseButtons.left = CameraControls.ACTION.TRUCK;
-    cameraControls.fitToBox(ifcModels[0], true, {
-      paddingTop: 1,
-      paddingBottom: 1,
-      paddingLeft: 0.3,
-      paddingRight: 0.3,
-    });
+    cameraControls.setLookAt(0, 20, 0, 0, 0, 0, (enableTransition = true));
+    // cameraControls.fitToBox(ifcModels[0], true, {
+    //   paddingTop: 1,
+    //   paddingBottom: 1,
+    //   paddingLeft: 0.3,
+    //   paddingRight: 0.3,
+    // });
   } else {
     this.removeAttribute("style");
     this.removeAttribute("data-clicked");
     cameraControls.mouseButtons.left = CameraControls.ACTION.ROTATE;
   }
 }
+
+/********************* Hide object button ***************************/
+
+const hideButton = document.getElementById("hideBtn");
+hideButton.addEventListener("click", tempHidingElement);
+
+function tempHidingElement(event) {
+  if (!this.dataset.clicked) {
+    hideButton.style = "outline-offset: -6px";
+    this.setAttribute("data-clicked", "true");
+  } else {
+    this.removeAttribute("style");
+    this.removeAttribute("data-clicked");
+  }
+}
+
 //Animation loop
 
 function animate() {
