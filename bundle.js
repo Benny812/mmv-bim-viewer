@@ -104444,19 +104444,19 @@ function cast(event) {
 // Creates subset material
 const preselectMat = new MeshLambertMaterial({
   transparent: true,
-  opacity: 0.6,
-  color: 0xff88ff,
+  opacity: 0.4,
+  color: 0xffff66,
   depthTest: false,
 });
 const selectMat = new MeshLambertMaterial({
   transparent: true,
   opacity: 0.6,
-  color: 0xff00ff,
+  color: 0xffff33,
   depthTest: false,
 });
 
 const selectModel = { id: -1 };
-window.ondblclick = (event) => highlight(event, selectMat, selectModel);
+window.onclick = (event) => highlight(event, selectMat, selectModel);
 
 function pick(event) {
   const found = cast(event)[0];
